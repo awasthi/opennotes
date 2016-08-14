@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,url,array}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem*{defn}{DEFINITION}
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{exmp}{Example}[section]
+
+
+\begin{document}
+	\title{Archimedean Property}
+	\maketitle
+	\begin{defn}
+		An ordered field $F$ has the Archimedean Property if, given any positive $x$ and
+		$y$ in $F$ there is an integer $n>0$ so that $nx > y$.
+	\end{defn}
+
+	\begin{thm}
+	The set of real numbers (an ordered field with the Least Upper Bound property)
+	has the Archimedean Property.
+	\end{thm}
+
+\begin{lem}
+	The set $N$ of positive integers $N =\{0, 1, 2, . . .\}$ is not bounded from above.
+	
+	Assume $N$ is bounded from above. Since $N\subset R$ and $R$ 	has the least upper bound property, then $N$ has a least upper bound $a\in R$. Thus $n\le a$ for all $n \in N$ and is the smallest such real number.
+	
+	Consequently $a-1$ is not an upper bound for $N$ (if it were, since $a-1<a$, then $a$ would
+	not be the least upper bound). Therefore there is some integer $k$ with $a-1 < k$. But then
+	$a < k + 1$. This contradicts that $a$ is an upper bound for $N$.
+\end{lem}
+	Proof: Since $x > 0$, the statement that there is an integer $n$ so that $nx > y$ is equivalent to finding an $n$ with $n > y/x$ for some $n$, But if there is no such $n$ then
+	$n < y/x$ for all integers $n$. That is, $y/x$ would be an upper bound for the integers. This
+	contradicts the Lemma.
+	\qed
+
+	Think example that will have an ordered field that does not have the Archimedean property.
+\section*{Summary}
+If $a$ and $b$ are positive integers, then there exists a positive number $n$, such that 
+\[na \ge b\]
+Example:  Let $a=7$ and $b=100$, then we can choose $n=100$ so that $100 (7) > 100$. 
+\end{document}
